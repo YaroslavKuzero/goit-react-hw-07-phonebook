@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import contactOperations from '../../redux/phonebook-operations';
+import { contactOperations, contactSelectors } from '../../redux'
 import styles from './Form.module.css';
 
 const initialState = {
@@ -56,7 +56,7 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 const mapStateToProps = (state) => ({
-  contacts: state.contacts,
+  contacts: contactSelectors.getContacts(state),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Form);

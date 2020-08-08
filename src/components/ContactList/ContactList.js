@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import styles from './ContactList.module.css';
-import contactOperations from '../../redux/phonebook-operations';
-
+import { contactOperations, contactSelectors } from '../../redux';
 
 class ContactList extends Component {
   componentDidMount() {
@@ -23,16 +22,8 @@ class ContactList extends Component {
   }
 }
 
-
-const getFilteredContacts = (items, filter) => {
-
-  const normalFilter = filter.toLowerCase();
-
-  return items.filter(item => item.name.toLowerCase().includes(normalFilter));
-}
-
 const mapStateToProps = (state) => ({
-  renderItems: getFilteredContacts(state.contacts, state.filter)
+  renderItems: contactSelectors.getFilteredContacts(state)
 })
 
 const mapDispatchToProps = dispatch => ({

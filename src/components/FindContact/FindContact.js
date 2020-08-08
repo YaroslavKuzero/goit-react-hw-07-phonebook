@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { changeFilter } from '../../redux/phonebook-actions';
+import { contactActions, contactSelectors } from '../../redux/';
 import styles from './FindContact.module.css';
 
 const Filter = ({ value, onChange }) => (
@@ -10,11 +10,11 @@ const Filter = ({ value, onChange }) => (
 );
 
 const mapStateToProps = (state) => ({
-  value: state.filter,
+  value: contactSelectors.getFilter(state),
 })
 
 const mapDispatchToProps = dispatch => ({
-  onChange: (event) => dispatch(changeFilter(event.target.value))
+  onChange: (event) => dispatch(contactActions.changeFilter(event.target.value))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Filter);

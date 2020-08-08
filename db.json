@@ -1,59 +1,34 @@
 {
   "contacts": [
     {
-      "name": ".,mnalvls;k",
-      "number": "poi2p32",
-      "id": 2
+      "name": "Monika Geller",
+      "number": "123456",
+      "id": 16
     },
     {
-      "name": ".,mdsm.mcs",
-      "number": "343803",
-      "id": 3
+      "name": "Rachel Green",
+      "number": "67890",
+      "id": 17
     },
     {
-      "name": "m,nv mc,n",
-      "number": "reee",
-      "id": 4
+      "name": "Ross Geller",
+      "number": "654321",
+      "id": 18
     },
     {
-      "name": "kdnksk",
-      "number": "878287",
-      "id": 6
+      "name": "Joseph Tribiani",
+      "number": "09876",
+      "id": 19
     },
     {
-      "name": "lmlksl",
-      "number": "434",
-      "id": 7
+      "name": "Phoebe Buffay",
+      "number": "90238",
+      "id": 20
     },
     {
-      "name": "sdss",
-      "number": "433",
-      "id": 8
-    },
-    {
-      "name": "sdkslksjd",
-      "number": "9827329",
-      "id": 9
-    },
-    {
-      "name": "gala",
-      "number": "65373",
-      "id": 11
-    },
-    {
-      "name": "jkhskskl",
-      "number": "2444",
-      "id": 12
-    },
-    {
-      "name": ",mldsd",
-      "number": "9828928092",
-      "id": 13
-    },
-    {
-      "name": "dscdcsc",
-      "number": "424343",
-      "id": 14
+      "name": "Chandler Bing",
+      "number": "0309948",
+      "id": 21
     }
   ]
 }

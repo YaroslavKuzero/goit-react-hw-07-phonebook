@@ -1,12 +1,12 @@
 import axios from 'axios';
-import { addContactRequest, addContactSuccess, addContactError, deleteContactRequest, deleteContactSuccess, deleteContactError, getContactsRequest, getContactsSuccess, getContactsError } from './phonebook-actions'
+import contactActions from './phonebook-actions'
 
 axios.defaults.baseURL = 'http://localhost:4040';
 
 const fetchContacts = () => dispatch => {
-  dispatch(getContactsRequest())
+  dispatch(contactActions.getContactsRequest())
 
-  axios.get('/contacts').then(({ data }) => dispatch(getContactsSuccess(data))).catch(error => dispatch(getContactsError(error)))
+  axios.get('/contacts').then(({ data }) => dispatch(contactActions.getContactsSuccess(data))).catch(error => dispatch(contactActions.getContactsError(error)))
 }
 
 
@@ -16,16 +16,16 @@ const addContact = contact => dispatch => {
     number: contact.number
   };
 
-  dispatch(addContactRequest())
+  dispatch(contactActions.addContactRequest())
 
 
-  axios.post('/contacts', newContact).then(({ data }) => dispatch(addContactSuccess(data))).catch(error => dispatch(addContactError(error)))
+  axios.post('/contacts', newContact).then(({ data }) => dispatch(contactActions.addContactSuccess(data))).catch(error => dispatch(contactActions.addContactError(error)))
 }
 
 const deleteContact = id => dispatch => {
-  dispatch(deleteContactRequest())
+  dispatch(contactActions.deleteContactRequest())
 
-  axios.delete(`/contacts/${id}`).then(() => dispatch(deleteContactSuccess(id))).catch(error => dispatch(deleteContactError(error)))
+  axios.delete(`/contacts/${id}`).then(() => dispatch(contactActions.deleteContactSuccess(id))).catch(error => dispatch(contactActions.deleteContactError(error)))
 }
 
 export default {

@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { contactSelectors } from '../../redux';
 import Form from '../Form';
 import Filter from '../FindContact';
 import ContactList from '../ContactList';
 import Spinner from '../Spinner';
 import styles from './PhoneBook.module.css';
-import { connect } from 'react-redux';
+
 
 
 
@@ -25,7 +27,7 @@ class Phonebook extends Component {
 }
 
 const mapStateToProps = state => ({
-  isloading: state.loading
+  isloading: contactSelectors.getLoading(state)
 })
 
 
