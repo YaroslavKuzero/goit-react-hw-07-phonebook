@@ -9,6 +9,11 @@ const Filter = ({ value, onChange }) => (
   </label>
 );
 
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+}
+
 const mapStateToProps = (state) => ({
   value: contactSelectors.getFilter(state),
 })

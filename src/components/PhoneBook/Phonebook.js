@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { contactSelectors } from '../../redux';
+import PropTypes from 'prop-types';
 import Form from '../Form';
 import Filter from '../FindContact';
 import ContactList from '../ContactList';
 import Spinner from '../Spinner';
 import styles from './PhoneBook.module.css';
-
-
-
 
 class Phonebook extends Component {
   render() {
@@ -24,6 +22,10 @@ class Phonebook extends Component {
       </div >
     )
   }
+}
+
+Phonebook.PropTypes = {
+  isloading: PropTypes.bool.isRequired,
 }
 
 const mapStateToProps = state => ({
