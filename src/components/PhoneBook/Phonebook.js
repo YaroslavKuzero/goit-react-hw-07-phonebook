@@ -9,6 +9,11 @@ import Spinner from '../Spinner';
 import styles from './PhoneBook.module.css';
 
 class Phonebook extends Component {
+
+  static propTypes = {
+    isloading: PropTypes.bool.isRequired,
+  }
+
   render() {
     return (
       <div className={styles.phonebook}>
@@ -24,14 +29,8 @@ class Phonebook extends Component {
   }
 }
 
-Phonebook.PropTypes = {
-  isloading: PropTypes.bool.isRequired,
-}
-
 const mapStateToProps = state => ({
   isloading: contactSelectors.getLoading(state)
 })
-
-
 
 export default connect(mapStateToProps, null)(Phonebook);
