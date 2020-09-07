@@ -1,14 +1,16 @@
 
 import React, { Component } from 'react';
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import styles from './Spinner.module.css'
+
 import Loader from 'react-loader-spinner';
+
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import s from './Spinner.module.css';
 
 class Spinner extends Component {
 
   render() {
     return (
-      <Loader className={styles.spinner} type="Grid" color="#00BFFF" height={70} width={70} />
+      <Loader className={s.spinner} type="Grid" color="#00BFFF" height={70} width={70} />
     );
   }
 }

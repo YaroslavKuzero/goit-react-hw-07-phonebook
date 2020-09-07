@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react';
 import { Provider } from 'react-redux';
 import store from './redux';
-import './css/body.css';
+
 import Phonebook from './components';
+
+import './css/body.css';
 
 function App() {
   return (
